@@ -1,0 +1,18 @@
+{
+  "$schema": "https://rcade.dev/manifest.schema.json",
+  "name": "makecode-arcade-monster-maze",
+  "display_name": "makecode-arcade-monster-maze",
+  "description": "makecode-arcade-monster-maze",
+  "visibility": "public",
+  "authors": [
+    {
+      "display_name": "rippy"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "@rcade/input-classic",
+      "version": "1.0.0"
+    }
+  ]
+}
