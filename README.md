@@ -8,6 +8,20 @@ This game is built for [RCade](https://rcade.recurse.com), a custom arcade cabin
 
 I used <https://github.com/UnsignedArduino/MakeCode-Arcade-to-App.git> to export my game from <https://arcade.makecode.com/>
 
+## Updating the game
+
+After editing the game in MakeCode Arcade and re-running the export tool:
+
+```bash
+# 1. Regenerate the export (in MakeCode-Arcade-to-App repo)
+cd /home/deck/ws/src/github.com/UnsignedArduino/MakeCode-Arcade-to-App
+bash gen
+
+# 2. Copy into this project
+cd /home/deck/ws/src/github.com/rippy/RCade/makecode-arcade-monster-maze
+bash update-game.sh
+```
+
 ## Getting Started
 
 Install dependencies:

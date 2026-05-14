@@ -86,9 +86,17 @@ These files were copied from the MakeCode-Arcade-to-App export output and should
 
 ### Updating the game
 
-1. Export the updated game using MakeCode-Arcade-to-App
-2. Copy the new `dist/` contents into `public/` (replace existing files)
-3. No changes to `src/main.js` or `index.html` are needed
+```bash
+# 1. Regenerate the export (in MakeCode-Arcade-to-App repo)
+cd /home/deck/ws/src/github.com/UnsignedArduino/MakeCode-Arcade-to-App
+bash gen
+
+# 2. Copy into this project
+cd /home/deck/ws/src/github.com/rippy/RCade/makecode-arcade-monster-maze
+bash update-game.sh
+```
+
+`update-game.sh` copies all 7 simulator files from the export `dist/` into `public/`, skipping `index.html` and `assets/` (which are the standalone website wrapper, not needed here). In practice only `binary.js` changes between game updates — the rest are stable framework files. No changes to `src/main.js` or `index.html` are needed.
 
 ## Development
 
