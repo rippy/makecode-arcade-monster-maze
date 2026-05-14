@@ -6,7 +6,7 @@ makecode-arcade-monster-maze
 
 This game is built for [RCade](https://rcade.recurse.com), a custom arcade cabinet at The Recurse Center. Learn more about the project at [github.com/fcjr/RCade](https://github.com/fcjr/RCade).
 
-Using https://github.com/UnsignedArduino/MakeCode-Arcade-to-App.git to export from https://arcade.makecode.com/
+I used <https://github.com/UnsignedArduino/MakeCode-Arcade-to-App.git> to export my game from <https://arcade.makecode.com/>
 
 ## Getting Started
 
@@ -49,8 +49,8 @@ Output goes to `dist/` and is ready for deployment.
 **Imported assets** (recommended) - Place in `src/` and import them. Vite bundles these with hashed filenames for cache busting:
 
 ```js
-import spriteUrl from './sprite.png';
-import jumpSound from './jump.mp3';
+import spriteUrl from "./sprite.png";
+import jumpSound from "./jump.mp3";
 
 const img = new Image();
 img.src = spriteUrl;
@@ -66,20 +66,34 @@ sound.play();
 This template uses `@rcade/plugin-input-classic` for arcade input:
 
 ```js
-import { PLAYER_1, SYSTEM } from '@rcade/plugin-input-classic'
+import { PLAYER_1, SYSTEM } from "@rcade/plugin-input-classic";
 
 // D-pad
-if (PLAYER_1.DPAD.up) { /* ... */ }
-if (PLAYER_1.DPAD.down) { /* ... */ }
-if (PLAYER_1.DPAD.left) { /* ... */ }
-if (PLAYER_1.DPAD.right) { /* ... */ }
+if (PLAYER_1.DPAD.up) {
+  /* ... */
+}
+if (PLAYER_1.DPAD.down) {
+  /* ... */
+}
+if (PLAYER_1.DPAD.left) {
+  /* ... */
+}
+if (PLAYER_1.DPAD.right) {
+  /* ... */
+}
 
 // Buttons
-if (PLAYER_1.A) { /* ... */ }
-if (PLAYER_1.B) { /* ... */ }
+if (PLAYER_1.A) {
+  /* ... */
+}
+if (PLAYER_1.B) {
+  /* ... */
+}
 
 // System
-if (SYSTEM.ONE_PLAYER) { /* Start game */ }
+if (SYSTEM.ONE_PLAYER) {
+  /* Start game */
+}
 ```
 
 ### Development Keyboard Controls
@@ -89,7 +103,7 @@ When developing locally, keyboard inputs are mapped to arcade controls:
 **Classic Controls (`@rcade/plugin-input-classic`)**
 
 | Player   | Action           | Key |
-|----------|------------------|-----|
+| -------- | ---------------- | --- |
 | Player 1 | UP               | W   |
 | Player 1 | DOWN             | S   |
 | Player 1 | LEFT             | A   |
@@ -108,7 +122,7 @@ When developing locally, keyboard inputs are mapped to arcade controls:
 **Spinner Controls (`@rcade/plugin-input-spinners`)**
 
 | Player   | Action        | Key |
-|----------|---------------|-----|
+| -------- | ------------- | --- |
 | Player 1 | Spinner Left  | C   |
 | Player 1 | Spinner Right | V   |
 | Player 2 | Spinner Left  | .   |
