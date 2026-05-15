@@ -26,16 +26,19 @@ function startSim(code) {
 fetch('binary.js')
     .then(res => res.text())
     .then(code => {
-        // Step 2: listen for "ready" before sending "run"
+        // Step 2: persistent listener for sim restart commands (game over → new game)
+        window.addEventListener('message', (ev) => {
+            if (ev.data?.type === 'simulator' && ev.data?.command === 'restart') {
+                sendToSim({ type: 'stop' })
+                setTimeout(() => startSim(code), 500)
+            }
+        })
+
+        // One-time listener: wait for "ready" then send "run"
         window.addEventListener('message', function handler(ev) {
             if (ev.data?.type === 'ready') {
                 window.removeEventListener('message', handler)
                 startSim(code)
-            }
-            // Relay restart requests from the sim
-            if (ev.data?.type === 'simulator' && ev.data?.command === 'restart') {
-                sendToSim({ type: 'stop' })
-                setTimeout(() => startSim(code), 500)
             }
         })
 
