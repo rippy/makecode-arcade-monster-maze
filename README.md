@@ -7,6 +7,7 @@ makecode-arcade-monster-maze
 This game is built for [RCade](https://rcade.recurse.com), a custom arcade cabinet at The Recurse Center. Learn more about the project at [github.com/fcjr/RCade](https://github.com/fcjr/RCade).
 
 I used <https://github.com/UnsignedArduino/MakeCode-Arcade-to-App.git> to export my game from <https://arcade.makecode.com/>
+- NOTE: I forked the above repo as <https://github.com/rippy/MakeCode-Arcade-to-App/tree/fixes_for_rcade>
 
 ## Updating the game
 
@@ -14,7 +15,7 @@ After editing the game in MakeCode Arcade and re-running the export tool:
 
 ```bash
 # 1. Regenerate the export (in MakeCode-Arcade-to-App repo)
-cd /home/deck/ws/src/github.com/UnsignedArduino/MakeCode-Arcade-to-App
+cd /home/deck/ws/src/github.com/rippy/MakeCode-Arcade-to-App
 bash gen
 
 # 2. Copy into this project

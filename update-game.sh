@@ -5,7 +5,8 @@
 
 set -euo pipefail
 
-DIST="/home/deck/ws/src/github.com/UnsignedArduino/MakeCode-Arcade-to-App/Racers/racers-website/dist"
+#DIST="/home/deck/ws/src/github.com/UnsignedArduino/MakeCode-Arcade-to-App/Racers/racers-website/dist"
+DIST="/home/deck/ws/src/github.com/rippy/MakeCode-Arcade-to-App/Racers/racers-website/dist"
 PUBLIC="$(dirname "$0")/public"
 
 if [[ ! -d "$DIST" ]]; then
